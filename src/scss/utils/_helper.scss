@@ -1,0 +1,48 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.mobile {
+  @media (width < 768px) {
+    display: none;
+  }
+}
+
+.mobile--575 {
+  @media (width < 575px) {
+    display: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}

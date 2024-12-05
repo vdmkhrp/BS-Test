@@ -1,0 +1,28 @@
+@use "../base/variables" as *;
+
+.banner {
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  row-gap: 6px;
+  flex-wrap: wrap;
+  color: $light;
+  padding: 6px;
+  background-color: $red--900;
+
+  @media (width < 768px) {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  img {
+    width: 16px;
+    aspect-ratio: 1;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,76 @@
+@use "../base/variables" as *;
+
+.burger {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: fit-content;
+
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+
+  @media (width < 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+
+    span {
+      height: 2px;
+      width: 100%;
+      background-color: $grey--800;
+      border-radius: 10px;
+
+      &::after,
+      &::before {
+        content: "";
+        height: 2px;
+        background-color: $grey--800;
+        border-radius: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+
+      &::after {
+        top: 2px;
+      }
+
+      &::before {
+        bottom: 2px;
+      }
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    color: $dark--400;
+
+    @media (width < 1024px) {
+      display: none;
+    }
+  }
+
+  &__title--mobile {
+    display: none;
+
+    @media (width < 1024px) {
+      display: block;
+    }
+  }
+}

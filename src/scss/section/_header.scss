@@ -1,0 +1,102 @@
+@use "../base/variables" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $light;
+  border-bottom: 1px solid $grey--400;
+
+  &__top {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  &__drop {
+    display: grid;
+    place-content: center;
+    width: 50px;
+    aspect-ratio: 1;
+    color: $grey--700;
+  }
+
+  &__link-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+
+    @media (width < 575px) {
+      column-gap: 10px;
+    }
+  }
+
+  &__nav {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+
+    @media (width < 768px) {
+      column-gap: 10px;
+      justify-content: space-around;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: $dark--400;
+
+    @media (width < 768px) {
+      flex-direction: column;
+    }
+
+    svg {
+      color: $grey--700;
+    }
+
+    img {
+      display: block;
+      width: 48px;
+      height: 100%;
+    }
+  }
+
+  &__link-text {
+    font-size: 15px;
+    white-space: nowrap;
+
+    @media (width < 1024px) {
+      display: none;
+    }
+  }
+
+  &__link-text--mobile {
+    display: none;
+
+    @media (width < 1024px) {
+      display: block;
+    }
+
+    @media (width < 768px) {
+      font-size: 13px;
+    }
+  }
+}

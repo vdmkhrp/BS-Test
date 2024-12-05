@@ -1,0 +1,24 @@
+//base
+@use "./base/custom-reset";
+@use "./base/variables";
+@use "./base/general";
+
+//components
+@use "./components/icon";
+@use "./components/banner";
+@use "./components/logo";
+@use "./components/search-form";
+@use "./components/burger";
+@use "./components/select";
+@use "./components/info";
+@use "./components/anchor-link";
+
+//section
+@use "./section/header";
+@use "./section/content";
+@use "./section/footer";
+@use "./section/header-second";
+@use "./section/footer-second";
+
+//utils
+@use "./utils/helper";

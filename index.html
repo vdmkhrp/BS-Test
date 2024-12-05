@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    {{> svg-sprite }}
+    <div class="visually-hidden" id="top"></div>
+    {{> header }}
+    {{> header-second }}
+    <main>
+     {{> content }}
+    </main>
+    {{> footer }}
+    {{> footer-second }}
+    <a href="#top" class="anchor-link">
+      <svg class="icon icon--30">
+        <use href="#down-chevron"></use>
+      </svg>
+    </a>
+    <script src="./src/js/script.js" type="module"></script>
+  </body>
+</html>

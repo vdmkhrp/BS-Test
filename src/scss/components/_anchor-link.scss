@@ -1,0 +1,38 @@
+@use "../base/variables" as *;
+
+.anchor-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: $red--900;
+  color: $light;
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  border: 3px solid transparent;
+  transition-property: color, background-color, border-color, translate, opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+  svg {
+    rotate: 180deg;
+  }
+
+  &:active {
+    translate: 0 6px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $red--900;
+      background-color: $light;
+      border-color: $red--900;
+    }
+  }
+}
